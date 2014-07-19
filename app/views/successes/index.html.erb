@@ -1,9 +1,15 @@
-<h1>Listing successes</h1>
+<h1>SUCCESS</h1>
 
 <h2>Description</h2>
-  <% @successes.each do |success| %>
-    <%= success.description %></td>
-  <% end %>
+
+  <section>
+    <% @successes.each do |success| %>
+      <div class="each-description">
+        <%= success.created_at.to_formatted_s(:long) %> -
+        <%= success.description %>
+      </div>
+    <% end %>
+  </section>
 
 <div class="horizontal-line"></div>
 
