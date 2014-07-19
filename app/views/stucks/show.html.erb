@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @stuck.created_at %> - <%= @stuck.description %>
+</p>
+
+<%= link_to 'Edit', edit_stuck_path(@stuck) %> |
+<%= link_to 'Back', stucks_path %>

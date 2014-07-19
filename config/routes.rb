@@ -1,5 +1,7 @@
 Huddle::Application.routes.draw do
 
+  resources :stucks
+
   devise_for :users
   resources :successes
   resources :priorities

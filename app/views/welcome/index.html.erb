@@ -1,3 +1,28 @@
 <h1>HUDDLE</h1>
 
-<p><%= Time.now.strftime("%A, %B %d, %Y") %></p>
+<p>Today is <%= Time.now.strftime("%A, %B %d, %Y") %></p>
+
+<h2>TEAM SUCCESS</h2>
+<section>
+  <% @successes.each do |success| %>
+    <div><%= success.description %></div>
+  <% end %>
+</section>
+
+<div class="horizontal-line"></div>
+
+<h2>TEAM PRIORITY</h2>
+<section>
+  <% @priorities.each do |priority| %>
+    <div><%= priority.description %></div>
+  <% end %>
+</section>
+
+<div class="horizontal-line"></div>
+
+<h2>TEAM STUCK</h2>
+<section>
+  <% @stucks.each do |stuck| %>
+    <div><%= stuck.description %></div>
+  <% end %>
+</section>
