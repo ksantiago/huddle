@@ -1,0 +1,16 @@
+<h1>PRIORITIES</h1>
+
+<h2>Description</h2>
+
+  <section>
+    <% @priorities.each do |priority| %>
+      <div class="each-description">
+        <%= priority.created_at.to_formatted_s(:long) %> -
+        <%= priority.description %>
+      </div>
+    <% end %>
+  </section>
+
+<div class="horizontal-line"></div>
+
+<%= link_to 'New Priority', new_priority_path %>
