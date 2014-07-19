@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
+gem 'devise'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -33,7 +34,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'rails_12factor', group: :production
+gem 'canonical-rails', github: 'jumph4x/canonical-rails'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 ruby "1.9.3"
 

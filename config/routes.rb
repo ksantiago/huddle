@@ -1,5 +1,6 @@
 Huddle::Application.routes.draw do
 
+  devise_for :users
   resources :successes
 
   root 'welcome#index'
