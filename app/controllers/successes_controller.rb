@@ -25,6 +25,7 @@ class SuccessesController < ApplicationController
   # POST /successes.json
   def create
     @success = Success.new(success_params)
+    @success.user_id = current_user.id
 
     respond_to do |format|
       if @success.save

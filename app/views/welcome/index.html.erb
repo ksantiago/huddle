@@ -2,6 +2,8 @@
 
 <p>Today is <%= Time.now.strftime("%A, %B %d, %Y") %></p>
 
+<%= link_to 'View Just My Success', successes_path %>
+
 <h2>TEAM SUCCESS</h2>
 <section>
   <% @successes.each do |success| %>

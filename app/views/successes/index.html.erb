@@ -1,12 +1,15 @@
+
+
 <h1>SUCCESS</h1>
 
 <h2>Description</h2>
-
   <section>
     <% @successes.each do |success| %>
       <div class="each-description">
-        <%= success.created_at.to_formatted_s(:long) %> -
-        <%= link_to 'success.description', success %>
+        <% if success.user_id == current_user.id %>
+            <%= success.created_at.to_formatted_s(:long) %> -
+            <a href="/successes/<%= success.id %>"><%= success.description %></a>
+        <% end %>
       </div>
     <% end %>
   </section>
