@@ -1,10 +1,9 @@
 Huddle::Application.routes.draw do
 
-  resources :stucks
-
   devise_for :users
   resources :successes
   resources :priorities
+  resources :stucks
 
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
