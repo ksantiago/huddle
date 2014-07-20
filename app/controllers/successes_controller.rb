@@ -1,4 +1,5 @@
 class SuccessesController < ApplicationController
+  belongs_to :user
   before_action :set_success, only: [:show, :edit, :update, :destroy]
 
   # GET /successes
