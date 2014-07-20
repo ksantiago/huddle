@@ -6,7 +6,7 @@
     <% @successes.each do |success| %>
       <div class="each-description">
         <%= success.created_at.to_formatted_s(:long) %> -
-        <%= success.description %>
+        <%= link_to 'success.description', success %>
       </div>
     <% end %>
   </section>
