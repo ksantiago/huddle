@@ -25,6 +25,7 @@ class PrioritiesController < ApplicationController
   # POST /priorities.json
   def create
     @priority = Priority.new(priority_params)
+    @priority.user_id = current_user.id
 
     respond_to do |format|
       if @priority.save

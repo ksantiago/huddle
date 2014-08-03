@@ -1,12 +1,13 @@
 <h1>PRIORITIES</h1>
 
 <h2>Description</h2>
-
   <section>
     <% @priorities.each do |priority| %>
       <div class="each-description">
-        <%= priority.created_at.to_formatted_s(:long) %> -
-        <%= priority.description %>
+        <% if priority.user_id == current_user.id %>
+          <%= priority.created_at.to_formatted_s(:long) %> -
+          <a href="/priorities/<%= priority.id %>"><%= priority.description %></a>
+        <% end %>
       </div>
     <% end %>
   </section>
