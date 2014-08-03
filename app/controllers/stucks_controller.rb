@@ -25,6 +25,7 @@ class StucksController < ApplicationController
   # POST /stucks.json
   def create
     @stuck = Stuck.new(stuck_params)
+    @stuck.user_id = current_user.id
 
     respond_to do |format|
       if @stuck.save

@@ -6,8 +6,7 @@
     <% @stucks.each do |stuck| %>
       <div class="each-description">
         <%= stuck.created_at.to_formatted_s(:long) %> -
-        <%= stuck.description %>
-        <%= link_to 'Show', stuck %> | <%= link_to 'Show', stuck %> | <%= link_to 'Destroy', stuck, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <a href="/stucks/<%= stuck.id %>"><%= stuck.description %></a>
       </div>
     <% end %>
   </section>
